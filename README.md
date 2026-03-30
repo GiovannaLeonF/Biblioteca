@@ -23,7 +23,7 @@ Este proyecto es una **aplicación de gestión de biblioteca** desarrollada con 
 ---
 
 ## Estructura del proyecto
-
+```text
 src/
 └─ main/
 └─ java/
@@ -35,7 +35,7 @@ src/
 │ └─ Libro.java # Entidad Libro
 └─ repository/
 └─ LibroRepository.java # Interfaz JPA
-
+```
 
 ---
 
