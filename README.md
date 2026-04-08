@@ -49,9 +49,11 @@ POST /libros/prestar/{id}
 - Reduce el stock disponible
 - Valida disponibilidad antes de realizar el préstamo
 ---
-📑 Documentación de la API
+## 📑 Documentación de la API
 
-Disponible con Swagger en:
+La documentación interactiva está disponible con Swagger.
+
+Una vez que la aplicación esté en ejecución, acceder a:
 
 http://localhost:8080/swagger-ui/index.html
 
