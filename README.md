@@ -40,13 +40,14 @@ El sistema implementa lógica de negocio para evitar préstamos cuando no hay di
 }
 ```
 📋 Listar libros
+
 GET /libros
 
 📚 Prestar libro
+
 POST /libros/prestar/{id}
 - Reduce el stock disponible
 - Valida disponibilidad antes de realizar el préstamo
-
 ---
 
 ## Estructura del proyecto
@@ -60,16 +61,17 @@ src/main/java/com/giovanna/biblioteca
 ---
 
 ## Cómo ejecutar el proyecto
-
+```bash
 git clone https://github.com/GiovannaLeonF/biblioteca.git
 cd biblioteca
 mvn spring-boot:run
+```
 
 Acceder a la API 
 http://localhost:8080/libros
-- Agregar libro (POST /Libros)
-- 
+
 🧠 Conceptos aplicados
+
 - Arquitectura REST
 - Persistencia con JPA
 - Separación en capas (Controller, Model, Repository)
@@ -77,5 +79,4 @@ http://localhost:8080/libros
 
 Autor
 Giovanna Luisa León Fuentes
-
-Repositorio de práctica y proyecto demostrativo de Spring Boot para nivel junior.
+Backend Developer (Java | Spring Boot)
