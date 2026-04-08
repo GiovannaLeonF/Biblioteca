@@ -1,71 +1,79 @@
-BIBLIOTECA - PROYECTO SPRING BOOT
+# 📚 Biblioteca API - Sistema de Gestión de Libros
 
-## Descripción
-Este proyecto es una **aplicación de gestión de biblioteca** desarrollada con **Spring Boot**, que permite agregar libros, listar los existentes y prestar libros, controlando el stock disponible. Ideal para aprender y demostrar conocimientos de **Java, Spring Boot, JPA y H2 Database**.
+## 🚀 Descripción
+
+API REST desarrollada con Spring Boot para la gestión de una biblioteca. Permite administrar libros, consultar el catálogo y gestionar préstamos con control de stock disponible.
+
+El sistema implementa lógica de negocio para evitar préstamos cuando no hay disponibilidad, simulando un entorno real de gestión.
 
 ---
 
-## Tecnologías utilizadas
+## 🛠️ Tecnologías utilizadas
+
 - Java 21
 - Spring Boot
 - Spring Data JPA
-- H2 Database (en memoria)
+- Base de datos H2 (en memoria)
 - Maven
-- IntelliJ IDEA
 
 ---
 
-## Funcionalidades
-1. **Agregar libros** a la biblioteca (POST `/Libros`)  
-2. **Listar libros** existentes (GET `/Libros`)  
-3. **Prestar libros** descontando stock (POST `/Libros/Prestar/{id}`)  
+## ⚙️ Funcionalidades principales
+
+- 📌 Alta de libros
+- 📌 Listado de libros disponibles
+- 📌 Gestión de préstamos
+- 📌 Control automático de stock
+
+---
+
+## 📡 Endpoints
+
+### ➕ Crear libro
+`POST /libros`
+
+```json
+{
+  "titulo": "El Principito",
+  "autor": "Antoine de Saint-Exupéry",
+  "stock": 3
+}
+```
+📋 Listar libros
+GET /libros
+
+📚 Prestar libro
+POST /libros/prestar/{id}
+- Reduce el stock disponible
+- Valida disponibilidad antes de realizar el préstamo
 
 ---
 
 ## Estructura del proyecto
 ```text
-src/
-└─ main/
-└─ java/
-└─ com.giovanna.biblioteca/
-├─ BibliotecaApplication.java # Clase principal Spring Boot
-├─ controller/
-│ └─ BibliotecaController.java # Endpoints REST
-├─ model/
-│ └─ Libro.java # Entidad Libro
-└─ repository/
-└─ LibroRepository.java # Interfaz JPA
+src/main/java/com/giovanna/biblioteca
+├── controller
+├── model
+├── repository
+└── BibliotecaApplication.java
 ```
-
 ---
 
 ## Cómo ejecutar el proyecto
 
-1. Clonar el repositorio:
-```bash
 git clone https://github.com/GiovannaLeonF/biblioteca.git
 cd biblioteca
-```
-
-2. Ejecutar la aplicación desde IntelliJ IDEA o por terminal:
 mvn spring-boot:run
 
-3. Acceder a la API en: http://localhost:8080/Libros
-
-4. Probar los endpoints con Postman o tu cliente HTTP favorito.
-Endpoints de ejemplo
-
+Acceder a la API 
+http://localhost:8080/libros
 - Agregar libro (POST /Libros)
-```json
-{
-    "titulo": "El Principito",
-    "autor": "Antoine de Saint-Exupéry",
-    "stock": 3
-}
-```
-
-- Listar libros (GET /Libros)
-- Prestar libro (POST /Libros/Prestar/1)
+- 
+🧠 Conceptos aplicados
+- Arquitectura REST
+- Persistencia con JPA
+- Separación en capas (Controller, Model, Repository)
+- Lógica de negocio aplicada (control de stock)
 
 Autor
 Giovanna Luisa León Fuentes
