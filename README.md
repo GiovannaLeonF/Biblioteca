@@ -49,7 +49,13 @@ POST /libros/prestar/{id}
 - Reduce el stock disponible
 - Valida disponibilidad antes de realizar el préstamo
 ---
+📑 Documentación de la API
 
+Disponible con Swagger en:
+
+http://localhost:8080/swagger-ui/index.html
+
+---
 ## Estructura del proyecto
 ```text
 src/main/java/com/giovanna/biblioteca
@@ -62,7 +68,7 @@ src/main/java/com/giovanna/biblioteca
 
 ## Cómo ejecutar el proyecto
 ```bash
-git clone https://github.com/GiovannaLeonF/biblioteca.git
+git clone https://github.com/GiovannaLeonF/Biblioteca.git
 cd biblioteca
 mvn spring-boot:run
 ```
@@ -76,6 +82,7 @@ http://localhost:8080/libros
 - Persistencia con JPA
 - Separación en capas (Controller, Model, Repository)
 - Lógica de negocio aplicada (control de stock)
+- Documentación de API con Swagger
 
 Autor
 Giovanna Luisa León Fuentes
